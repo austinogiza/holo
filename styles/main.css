@@ -13,9 +13,11 @@
 --amazon: #EFCFE4;
 --mcdonalds: #D2F2DB;
 --purple: #DAF3D4;
+--smoke: #fafafa;
 }
 html{
   scroll-behavior: smooth;
+  font-family: "Euclid Circular A Regular";
 }
 
 @font-face {
@@ -43,7 +45,7 @@ html{
 }
 
 body{
-
+  font-family: "Euclid Circular A Regular";
     height: 100%;
     width: 100%;
     background: var(--white);
@@ -468,13 +470,13 @@ margin:  0 0 16px 0;
 
 .account_text h3{
 
-  font-size: 12px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 300;
-  line-height: 12px;
+  line-height: 14px;
   font-family: "Euclid Circular A Light";
   text-align: left;
-color: var(--grey);  
+color: var(--smoke);  
 margin:  0;  
 }
 
