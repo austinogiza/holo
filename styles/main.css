@@ -780,7 +780,7 @@ background: var(--spotify);
   }
 
   .chart_section{
-    min-height: 210px;
+    min-height: 200px;
 max-width: 450px;
 width: 100%;
 display: grid;
@@ -952,7 +952,7 @@ color: var(--grey);
   }
 
   .chart_section{
-    min-height: 204px;
+    min-height: 200px;
 max-width: 400px;
 width: 100%;
 display: grid;
@@ -1072,7 +1072,15 @@ margin: 32px 0;
     padding: 20px;
      
    }
-
+   .chart_section{
+    min-height: 200px;
+max-width: 400px;
+width: 100%;
+display: grid;
+grid-template-columns: repeat(1,1fr);
+grid-gap: 32px;
+margin: 32px 0;
+  }
    
 .account_text h1{
 
