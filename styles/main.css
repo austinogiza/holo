@@ -14,6 +14,9 @@
 --mcdonalds: #D2F2DB;
 --purple: #DAF3D4;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 @font-face {
   font-family: "Euclid Circular A Light";
@@ -69,6 +72,7 @@ a{
 box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
 background: var(--white);
 
+
   }
 
   nav .nav_container{
@@ -79,6 +83,7 @@ background: var(--white);
     display: grid;
     grid-template-columns: 1fr 1.5fr 2fr;
 grid-gap: 40px;
+padding: 10px 24px;
   }
 /* holo logo styling */
   nav .logo{
@@ -200,8 +205,9 @@ main{
   display: grid;
   margin: 72px auto 0 auto;
   max-width: 1300px;
-  grid-template-columns: 1fr 1fr 8fr;
+  grid-template-columns: 0.5fr 0.5fr 8fr;
   grid-gap: 70px;
+  padding: 10px 24px;
 
 }
 
@@ -212,7 +218,7 @@ main{
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 10px 20px;
+
 }
 
 .sidebar .icons{
@@ -331,7 +337,7 @@ margin: 0 0 24px 0;
 
   .brand_wrapper{
     width: 100%;
-    min-height: 40px;
+    height: 40px;
     display: grid;
   grid-template-columns: 40px auto;
   grid-gap: 16px;
@@ -399,10 +405,10 @@ text-align: left;
   .brand_details h3{
     font-size: 16px;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 16px;
 color: var(--black);
-font-family: "Euclid Circular A Light";
+font-family: "Euclid Circular A Medium";
      
 }
 
@@ -412,7 +418,7 @@ font-family: "Euclid Circular A Light";
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 10px 20px;
+
 }
 
 .account_top{
@@ -486,6 +492,8 @@ margin:  0;
 }
 
 .account_button button{
+  position: relative;
+  z-index: 30;
   max-width: 178px;
   height: 56px;
   width: 100%;
@@ -628,8 +636,8 @@ margin: 12px 0;
 
 }
 .account_card .card_pattern{
-  height: 250px;
-width: 160px;
+  height: 160px;
+width: 150px;
 right: 0;
 top: 0;
 position: absolute;
@@ -638,9 +646,10 @@ background: url('../assets/card_pattern.svg');
 
 
 
+
 .depositing{
   width: 100%;
-  min-height: 300px;
+  min-height: 250px;
   display: flex;
   flex-direction: column;
 }
@@ -770,7 +779,7 @@ background: var(--spotify);
   }
 
   .chart_section{
-    min-height: 204px;
+    min-height: 210px;
 max-width: 450px;
 width: 100%;
 display: grid;
@@ -789,11 +798,26 @@ margin: 32px 0;
 
   .chart_section .chart_items .chart_row{
     width: 100%;
-    min-height: 40px;
+    height: 40px;
     display: grid;
   grid-template-columns: 15px auto;
   grid-gap: 16px;
     margin: 12px 0;
+  }
+
+  .chart_section .chart_cover{
+height: 160px;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+  }
+
+  .chart_section .chart_cover canvas{
+    max-width: 200px;
+    width: 100%;
+    height: 100%;
+    max-height: 200px;
   }
 
   .chart_section .chart_items .chart_row .chart_color{
@@ -846,7 +870,7 @@ margin: 32px 0;
   line-height: 16px;
   letter-spacing: 0em;
   text-align: left;
-margin:  0 0 16px 0;  
+margin:  0 0 8px 0;  
 }
 
 .chart_item_text h4{
@@ -864,7 +888,7 @@ margin:  0;
 }
 .chart_spending{
   width: 100%;
-  height: 100%;
+  min-height: 100px;
    display: flex;
    flex-direction: column;
 }
@@ -888,7 +912,7 @@ text-align: left;
 }
 
 .chart_spending .spending_chart{
-  height: 170px;
+  min-height: 200px;
 max-width: 440px;
 width: 100%;
 
@@ -937,6 +961,7 @@ margin: 32px 0;
   }
 
   .account_button button{
+    
     max-width: 178px;
     height: 56px;
     width: 100%;
@@ -947,8 +972,6 @@ margin: 32px 0;
     color: var(--black);
     background: var(--white);
     border: 0.8px solid var(--black);
-    position: relative;
-    z-index: 30;
     border-radius: 10px;
     font-size: 16px;
     font-style: normal;
@@ -973,7 +996,9 @@ margin: 32px 0;
     background: var(--black);
     color: var(--white);
   }
-  
+  .chart_section .chart_cover{
+    height: 100%;
+      }
   .account_button button:focus .fa-arrow-right{
     color: var(--white);
   }
@@ -1053,7 +1078,6 @@ margin: 32px 0;
     min-height: 700px;
     display: grid;
     margin: 72px auto 0 auto;
-    max-width: 1300px;
     grid-template-columns: repeat(1,1fr);
     grid-gap: 24px;
     grid-template-areas: "account"
@@ -1076,7 +1100,6 @@ margin: 32px 0;
 
   min-height: 200px;
   padding: 25px 15px;
-
   display: flex;
   flex-direction: column;
   align-items: center ;
