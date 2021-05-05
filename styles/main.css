@@ -12,6 +12,7 @@
     --lyft: #D0E1EE;
 --amazon: #EFCFE4;
 --mcdonalds: #D2F2DB;
+--purple: #DAF3D4;
 }
 
 body{
@@ -42,6 +43,7 @@ a{
     height: 100px;
     width: 100%;
 box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
+background: var(--white);
 
   }
 
@@ -105,6 +107,62 @@ grid-gap: 40px;
   .nav_ul li a:first-of-type{
     color: var(--black);
   }
+
+  nav .user_corner{
+justify-self: flex-end;
+width: 100%;
+height: 100%;
+max-width: 218px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-direction: row;
+
+  }
+
+.bell_off .fa-bell-slash{
+  width: 24px;
+height: 24px;
+color: var(--grey);
+}
+
+.user_name{
+
+height: 100%;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content:center;
+
+}
+
+.user_name h3{
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.user_profile .user_color{
+  height: 40px;
+  width: 40px;
+  display: flex;
+align-items: center;
+justify-content:center;
+background: var(--lyft);
+  border-radius:50% ;
+  -webkit-border-radius:50% ;
+  -moz-border-radius:50% ;
+  -ms-border-radius:50% ;
+  -o-border-radius:50% ;
+
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px;
+
+}
   
 /* main section */
 
@@ -114,8 +172,9 @@ main{
   display: grid;
   margin: 72px auto 0 auto;
   max-width: 1300px;
-  grid-template-columns: 80px 200px auto;
+  grid-template-columns: 1fr 1fr 8fr;
   grid-gap: 70px;
+
 }
 
 .sidebar{
@@ -125,7 +184,7 @@ main{
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-
+  padding: 10px 20px;
 }
 
 .sidebar .icons{
@@ -168,6 +227,12 @@ width: 32px;
   cursor: pointer;
 }
 
+.fa-sign-out-alt{
+  
+font-size: 24px;
+color: var(--grey);
+}
+
 .budget{
   width: 100%;
   height: 600px;
@@ -175,7 +240,7 @@ width: 32px;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-
+  padding: 10px 20px;
 }
 
 .budget .top{
@@ -316,10 +381,11 @@ color: var(--grey);
   height: 100%;
   display: flex;
   flex-direction: column;
+  padding: 10px 20px;
 }
 
 .account_top{
-  max-width: 941px;
+  max-width: 940px;
 min-height: 110px;
 color: var(--white);
 background: var(--black);
@@ -330,8 +396,19 @@ display: flex;
 flex-direction: row;
 align-items: flex-start ;
 justify-content: flex-start;
+position: relative;
+overflow: hidden;
 }
 
+
+.account_top .card_pattern {
+  position: absolute;
+  height: 140px;
+  width: 420px;
+  right: -80px;
+  top: 0;
+  
+  }
 
 .account_text{
   width: 100%;
@@ -339,6 +416,8 @@ justify-content: flex-start;
   max-width: 300px;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 30;
 }
 
 .account_text h1{
@@ -430,7 +509,7 @@ margin:  0;
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 400px auto;
+  grid-template-columns: 1.5fr 2fr;
   grid-gap: 40px;
 }
 
@@ -452,10 +531,79 @@ margin: 0 0 40px 0;
 
 .account_card .card_top{
   width: 100%;
-  height: 100%;
+  height: 250px;
   border-radius: 10px;
   background: var(--black);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 40px;
+  color: var(--grey);
 }
+
+.account_card .card_top .card_design{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.account_card .card_top .card_design h1{
+font-size: 13px;
+font-style: normal;
+font-weight: 500;
+line-height: 13px;
+
+
+}
+
+.account_card .card_top .card_design .card_expiry{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+.account_card .card_top .card_design .sim{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+.account_card .card_top .card_design .sim img{
+  margin-right: 16px;
+}
+.account_card .card_top .card_design .card_expiry h3{
+
+font-size: 13px;
+font-style: normal;
+font-weight: 500;
+line-height: 13px;
+margin: 12px 0;
+
+}
+.account_card .card_top .card_design .card_expiry h4{
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 13px;
+
+  margin: 0;
+  
+
+}
+.account_card .card_pattern{
+  height: 250px;
+width: 160px;
+right: 0;
+top: 0;
+position: absolute;
+background: url('../assets/card_pattern.svg');
+}
+
+
 
 .depositing{
   width: 100%;
@@ -526,5 +674,374 @@ color: var(--grey);
   }
 
   .account_right{
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .account_right .expenses{
+    width: 100%;
+    min-height: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .account_right .expenses .expense_row{
+    width: 100%;
+   height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+.account_right .expenses .expense_row h1{
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 18px;
+
+
+  }
+
+  .account_right .expenses .expense_row select{
+    border: none;
+    height: 24px;
+    width: 72px;
+    outline: none;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    appearance: none;
+    -moz-appearance: none;
+-webkit-appearance: none;
+-ms-appearance:none;
+background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9L12 15L18 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+background-repeat: no-repeat;
+background-size: 30%;
+background-position: top 50% right 0;
+}
+
+
+  .account_right .expenses .expense_row select option{
+    height: 14px;
+    width: 100%;
+    font-size: 13px;
+font-style: normal;
+font-weight: 500;
+background: var(--spotify);
+  }
+
+  .chart_section{
+    min-height: 204px;
+max-width: 450px;
+width: 100%;
+display: grid;
+grid-template-columns: repeat(2,1fr);
+grid-gap: 80px;
+margin: 32px 0;
+  }
+
+  .chart_section .chart_items{
+    width: 100%;
+    height: 100%;
+     display: flex;
+     flex-direction: column;
+
+  } 
+
+  .chart_section .chart_items .chart_row{
+    width: 100%;
+    min-height: 40px;
+    display: grid;
+  grid-template-columns: 15px auto;
+  grid-gap: 16px;
+    margin: 12px 0;
+  }
+
+  .chart_section .chart_items .chart_row .chart_color{
+    height: 10px;
+    width: 10px;
+    display: flex;
+
+}
+
+.chart_section .chart_items .chart_row .chart_color .color{
+  height: 10px;
+  width: 10px;
+
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.chart_color .chart_black{
+  background: var(--black);
+}
+
+.chart_color .chart_blue{
+  background: var(--lyft);
+}
+.chart_color .chart_purple{
+  background: var(--purple);
+}
+
+
+.chart_item_text{
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart_item_text h3{
+
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+margin:  0 0 16px 0;  
+}
+
+.chart_item_text h4{
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  
+color: var(--grey);  
+margin:  0;  
+}
+.chart_spending{
+  width: 100%;
+  height: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+.chart_spending .spending_title{
+  height: 18px;
+max-width: 130px;
+width: 100%;
+
+}
+
+.chart_spending .spending_title h1{
+  font-family: Euclid Circular A;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 18px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+
+.chart_spending .spending_chart{
+  height: 170px;
+max-width: 440px;
+width: 100%;
+
+}
+
+.chart_spending .spending_month{
+  height: 14px;
+max-width: 449px;
+width: 100%;
+}
+
+.chart_spending .spending_month ul{
+  width: 100%;
+  height: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+.chart_spending .spending_month ul li{
+  font-family: Euclid Circular A;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 14px;
+letter-spacing: 0em;
+text-align: left;
+color: var(--grey);
+}
+
+@media only screen and (max-width: 1200px){
+  .account_main_section{
+   
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+  .chart_section{
+    min-height: 204px;
+max-width: 400px;
+width: 100%;
+display: grid;
+grid-template-columns: repeat(1,1fr);
+grid-gap: 80px;
+margin: 32px 0;
+  }
+
+  .account_button button{
+    max-width: 178px;
+    height: 56px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+    background: var(--white);
+    border: 0.8px solid var(--black);
+    position: relative;
+    z-index: 30;
+    border-radius: 10px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+    -webkit-transition: 0.3s ease-in;
+    -moz-transition: 0.3s ease-in;
+    -ms-transition: 0.3s ease-in;
+    -o-transition: 0.3s ease-in;
+  }
+  
+  .account_button button:hover{
+    background: var(--black);
+    color: var(--white);
     
   }
+  .account_button button:focus{
+    background: var(--black);
+    color: var(--white);
+  }
+  
+  .account_button button:focus .fa-arrow-right{
+    color: var(--white);
+  }
+  .account_button button:hover .fa-arrow-right{
+    color: var(--white);
+  }
+  .account_button .fa-arrow-right{
+    color: var(--black);
+    height: 18px;
+    width: 18px;
+    margin: 0 0 0 16px;
+    transition: 0.3s ease-in;
+    -webkit-transition: 0.3s ease-in;
+    -moz-transition: 0.3s ease-in;
+    -ms-transition: 0.3s ease-in;
+    -o-transition: 0.3s ease-in;
+  }
+  
+}
+
+@media only screen and (max-width: 1000px){
+
+  .account_main_section{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 40px;
+  }
+
+  .nav_links{
+   display: none;
+
+  }
+  nav .user_corner{
+    display: none;
+  }
+
+}
+
+
+@media only screen and (max-width: 800px){
+  main{
+    width: 100%;
+    min-height: 700px;
+    display: grid;
+    margin: 72px auto 0 auto;
+    max-width: 1300px;
+    grid-template-columns: 1fr 8fr;
+    grid-gap: 40px;
+   
+  }
+  .sidebar{
+    width: 100%;
+    height: 600px;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  
+  }
+  nav .logo{
+ 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+     
+   }
+}
+
+@media only screen and (max-width: 650px){
+  main{
+    width: 100%;
+    min-height: 700px;
+    display: grid;
+    margin: 72px auto 0 auto;
+    max-width: 1300px;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 24px;
+    grid-template-areas: "account"
+    "budget";
+
+  }
+  .account{
+    grid-area: account;
+  }
+
+  .budget{
+    grid-area: budget;
+   
+  }
+}
+
+
+@media only screen and (max-width: 450px){
+  .account_top{
+
+  min-height: 200px;
+  padding: 25px 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
+  justify-content: center;
+
+  }
+}

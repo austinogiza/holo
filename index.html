@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="styles/main.css">
    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.css">
 <link rel="stylesheet" href="fontawesome-free-5.15.3-web/webfonts">
-  
-
+  <script src="js/chart.min.js"></script>
 </head>
 <body>
     <!-- Holo navbar -->
@@ -34,7 +33,7 @@
 
         <!-- holo user profile -->
         <div class="user_corner">
-            <div class="bell_off"><img src="" alt=""></div>
+            <div class="bell_off"><i class="far fa-bell-slash"></i></div>
             <div class="user_name">
                 <h3>Darrel Steward</h3>
             </div>
@@ -62,7 +61,7 @@
         </div>
 
         <div class="log_out">
-            <img src="assets/log-in.svg" alt="">
+            <i class="fas fa-sign-out-alt"></i>
         </div>
     </div>
     <div class="budget">
@@ -120,6 +119,9 @@
     <div class="account">
        
         <div class="account_top">
+            <div class="card_pattern">
+                <img src="assets/pattern.svg" alt="">
+            </div>
             <div class="account_text">
                 <h1>Open an account quick</h1>
                 <h3>Exclusive for extrordinary people</h3>
@@ -137,10 +139,17 @@
      <div class="account_left">
         <div class="account_card">
             <div class="card_top">
+                <div class="card_pattern">
+               
+                </div>
                 <div class="card_design">
                     <h1>HOLO PREMIUM</h1>
 
-                    <span class="sim"><img src="assets/surface.svg" alt=""></span>
+                    <span class="sim"><img src="assets/surface.svg" alt=""> <img src="assets/volume.svg" alt=""></span>
+                    <div class="card_expiry">
+                        <h3>EXPIRED END 07/24</h3>
+                        <h4>holo.com/paypass</h4>
+                    </div>
 
                 </div>
             </div>
@@ -189,15 +198,16 @@
                 <h1>Expenses instead</h1>
 
          
-                    <section>
+                    <select>
                         <option value="Month" selected>Month</option>
-                    </section>
+                        <option value="Month">Jan</option>
+                    </select>
            
              </div>
          </div>
 <div class="chart_section">
     <div class="chart_cover">
-
+        <canvas id="myChart" width="210" height="210"></canvas>
     </div>
     <div class="chart_items">
         <div class="chart_row">
@@ -206,25 +216,25 @@
             </div>
             <div class="chart_item_text">
                 <h3>Transport</h3>
-                <h3>$790.50</h3>
+                <h4>$790.50</h4>
             </div>
         </div>
         <div class="chart_row">
             <div class="chart_color">
-                <span class="color chart_black"></span>
+                <span class="color chart_blue"></span>
             </div>
             <div class="chart_item_text">
                 <h3>Online shopping</h3>
-                <h3>$4,200.00</h3>
+                <h4>$4,200.00</h4>
             </div>
         </div>
         <div class="chart_row">
             <div class="chart_color">
-                <span class="color chart_black"></span>
+                <span class="color chart_purple"></span>
             </div>
             <div class="chart_item_text">
                 <h3>Restaurant</h3>
-                <h3>$1,290.00</h3>
+                <h4>$1,290.00</h4>
             </div>
         </div>
     </div>
@@ -236,7 +246,18 @@
     </div>
 
     <div class="spending_chart">
-        
+  
+    </div>
+    <div class="spending_month">
+        <ul>
+            <li>Jan</li>
+            <li>Feb</li>
+            <li>Mar</li>
+            <li>Apr</li>
+            <li>May</li>
+            <li>Jun</li>
+
+        </ul>
     </div>
 </div>
 
@@ -247,3 +268,44 @@
 
 </body>
 </html>
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+
+    // var line = document.getElementById('lineChart').getContext('2d');
+
+    const data = {
+  datasets: [{
+    label: 'My First Dataset',
+    data: [80, 80, 120],
+    backgroundColor: [
+    '#000000',
+    
+      '#DFF6E6',
+      '#D0E1EE',
+     
+    ],
+    hoverOffset: 20
+  }]
+};
+    var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: data
+    });
+
+//     const config = {
+//   type: 'line',
+//   data: data,
+// };
+
+// const labels = Utils.months({count: 7});
+// const data = {
+//   labels: labels,
+//   datasets: [{
+//     label: 'My First Dataset',
+//     data: [65, 59, 80, 81, 56, 55, 40],
+//     fill: false,
+//     borderColor: 'rgb(75, 192, 192)',
+//     tension: 0.1
+//   }]
+// };
+    </script>
