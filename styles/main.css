@@ -904,7 +904,7 @@ width: 100%;
 }
 
 .chart_spending .spending_title h1{
-  font-family: Euclid Circular A;
+  font-family: "Euclid Circular A Medium";
 font-size: 18px;
 font-style: normal;
 font-weight: 500;
@@ -915,14 +915,14 @@ text-align: left;
 }
 
 .chart_spending .spending_chart{
-  min-height: 200px;
+  min-height: 220px;
 max-width: 440px;
 width: 100%;
 
 }
 
 .chart_spending .spending_month{
-  height: 14px;
+  height: 16px;
 max-width: 449px;
 width: 100%;
 }
@@ -936,7 +936,7 @@ width: 100%;
 }
 
 .chart_spending .spending_month ul li{
-  font-family: Euclid Circular A;
+  font-family: "Euclid Circular A Medium";
 font-size: 14px;
 font-style: normal;
 font-weight: 500;
@@ -1081,7 +1081,7 @@ width: 100%;
 display: grid;
 grid-template-columns: repeat(1,1fr);
 grid-gap: 16px;
-margin: 16px 0;
+margin: 24px 0;
   }
    
 .account_text h1{
