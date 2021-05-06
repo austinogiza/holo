@@ -1076,13 +1076,12 @@ margin: 32px 0;
    }
    .chart_section{
     min-height: 300px;
-    height: 100%;
 max-width: 400px;
 width: 100%;
 display: grid;
 grid-template-columns: repeat(1,1fr);
 grid-gap: 16px;
-margin: 32px 0;
+margin: 16px 0;
   }
    
 .account_text h1{
