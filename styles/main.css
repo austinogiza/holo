@@ -891,7 +891,7 @@ margin:  0;
 }
 .chart_spending{
   width: 100%;
-  min-height: 100px;
+  min-height: 200px;
    display: flex;
    flex-direction: column;
 }
@@ -964,7 +964,6 @@ margin: 32px 0;
   }
 
   .account_button button{
-    
     max-width: 178px;
     height: 56px;
     width: 100%;
@@ -989,7 +988,11 @@ margin: 32px 0;
     -moz-transition: 0.3s ease-in;
     -ms-transition: 0.3s ease-in;
     -o-transition: 0.3s ease-in;
-  }
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
   
   .account_button button:hover{
     background: var(--black);
@@ -1106,7 +1109,7 @@ margin:  0 0 16px 0;
     display: grid;
     margin: 72px auto 0 auto;
     grid-template-columns: repeat(1,1fr);
-    grid-gap: 24px;
+    grid-gap: 32px;
     grid-template-areas: "account"
     "budget";
 
@@ -1130,7 +1133,6 @@ margin:  0 0 16px 0;
 
 @media only screen and (max-width: 450px){
   .account_top{
-
   min-height: 200px;
   padding: 25px 15px;
   display: flex;
