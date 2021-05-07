@@ -409,6 +409,7 @@ text-align: left;
   flex-direction: column;
   /* justify-content: flex-start;
   align-items: flex-start; */
+    font-family: "EuclidCircularAMedium";
 }
 
 .budget .top h1{
@@ -417,6 +418,7 @@ font-weight: 600;
 line-height: 32px;
 margin: 16px 0;
 text-align: left;
+  font-family: "EuclidCircularARegular";
 
 }
 
