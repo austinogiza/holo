@@ -560,13 +560,16 @@ overflow: hidden;
 
 .account_top .card_pattern {
   position: absolute;
-  height: 140px;
+  height:100%;
   width: 420px;
   right: -80px;
-  top: 0;
+  bottom: -20px;
   
   }
-
+  .account_top .card_pattern img{
+    height:100%;
+    width: 100%;
+  }
 .account_text{
   width: 100%;
   height: 100%;
@@ -1256,6 +1259,16 @@ right: 0;
 opacity: 0;
 }
 
+.account_top .card_pattern {
+  position: absolute;
+  height: 140px;
+  width: 420px;
+  right: -80px;
+  bottom: 0;
+  
+  }
+
+
 
 .tog .line3{
   transform: rotate(45deg) translate(-5px,-6px);
@@ -1308,6 +1321,13 @@ margin: 24px 0;
 
 }
 
+.account_card .card_pattern{
+
+width: 130px;
+
+}
+
+
 .account_text h3{
 
   text-align: center;
@@ -1345,7 +1365,7 @@ margin:  0 0 16px 0;
 }
 
 
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 500px){
   .account_top{
   min-height: 200px;
   padding: 25px 15px;
@@ -1355,4 +1375,12 @@ margin:  0 0 16px 0;
   justify-content: center;
 
   }
+
+  .account_card .card_pattern{
+
+    width: 110px;
+    
+    }
+    
+    
 }
