@@ -653,10 +653,12 @@ margin:  0;
 .account_button button:hover{
   background: var(--white);
   color: var(--black);
+  border: 1px solid var(--white);
 }
 .account_button button:focus{
   background: var(--white);
   color: var(--black);
+    border: 1px solid var(--white);
 }
 
 .account_button button:focus .fa-arrow-right{
