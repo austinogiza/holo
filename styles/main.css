@@ -1237,9 +1237,12 @@ right: 0;
   -moz-transition: 0.3s ease-in;
   -ms-transition: 0.3s ease-in;
   -o-transition: 0.3s ease-in;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 .sidebar .icons{
   height: 400px;
+  margin-top: 40px;
 }
 .tog .line1{
   transform: rotate(-45deg) translate(-5px,6px);
