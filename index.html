@@ -270,7 +270,7 @@
     </div>
 
     <div class="spending_chart">
-        <!-- <div class="ct-chart ct-perfect-fourth"></div> -->
+        <div class="ct-chart ct-perfect-fourth .ct-line"></div>
     </div>
     <div class="spending_month">
         <ul>
@@ -295,9 +295,11 @@
 
 <script src="js/main.js"></script>
 <script>
+
+    // doughnut chart
     var ctx = document.getElementById('myChart').getContext('2d');
 
-    // var line = document.getElementById('lineChart').getContext('2d');
+    
 
     const data = {
   datasets: [{
@@ -318,26 +320,15 @@
         data: data
     });
 
-//     const config = {
-//   type: 'line',
-//   data: data,
-// };
 
-// const labels = Utils.months({count: 7});
-// const data = {
-//   labels: labels,
-//   datasets: [{
-//     label: 'My First Dataset',
-//     data: [65, 59, 80, 81, 56, 55, 40],
-//     fill: false,
-//     borderColor: 'rgb(75, 192, 192)',
-//     tension: 0.1
-//   }]
-// };
 
+    var options = {
+  width: 200,
+  height: 200
+};
 var chart = new Chartist.Line('.ct-chart', {
   series: [
-    [1, 5, 2, 5, 4, 3],
+    [1, 0.5, 1.5, 0.5, 1, 0.6],
   ]
 }, {
   low: 0,
@@ -345,17 +336,19 @@ var chart = new Chartist.Line('.ct-chart', {
   showPoint: false,
   fullWidth: true,
   
-});
+}, options);
+
 
 chart.on('draw', function(data) {
         if(data.type === 'line' || data.type === 'area') {
             data.element.animate({
       d: {
         begin: 2000 * data.index,
-        dur: 2000,
+        dur: 1000,
         from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
         to: data.path.clone().stringify(),
-        easing: Chartist.Svg.Easing.easeOutQuint
+        easing: Chartist.Svg.Easing.easeOutQuint,
+    
       }
     });
   }

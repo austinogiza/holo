@@ -3,7 +3,7 @@ const stack = document.querySelector(".toggle_stack")
 const toggle = document.querySelectorAll(".toggle")
 const sidebar = document.querySelector(".sidebar")
 
-
+//toggle menu function
 const toggleMenu =()=>{
 
     sidebar.classList.toggle("nav_active")

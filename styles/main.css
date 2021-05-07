@@ -91,7 +91,7 @@ position: relative;
 
   .toggle_menu{
     position: absolute;
-    top: 30%;
+    top: 35%;
     display: none;
     cursor: pointer;
     right: 24px;
@@ -703,6 +703,25 @@ margin: 0 0 40px 0;
   color: var(--grey);
 }
 
+.ct-vertical ~ .ct-vertical {
+  stroke: none;
+}
+.ct-horizontal ~ .ct-horizontal {
+  stroke: none;
+}
+.ct-labels, .ct-grids {
+  display: none;
+}
+.ct-perfect-fourth{
+  padding: 10px 24px;
+  margin: 24px  0;
+
+}
+.ct-series-a .ct-bar, .ct-series-a .ct-line, .ct-series-a .ct-point, .ct-series-a .ct-slice-donut {
+  stroke: #000 !important;
+}
+
+
 .account_card .card_top .card_design{
   display: flex;
   flex-direction: column;
@@ -1273,6 +1292,15 @@ margin: 24px 0;
 
 
   text-align: center;
+
+}
+
+.account_left{
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
 
 }
 
