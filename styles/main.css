@@ -22,26 +22,31 @@ html{
 
 @font-face {
   font-family: "EuclidCircularALight";
-  src: url('../fonts/EuclidCircularA-Light.ttf');
+  src: url('../fonts/EuclidCircularA-Light.ttf') format("truetype").
+  url('../fonts/EuclidCircularA-Light.woff') format("woff");
 }
 @font-face {
   font-family: "EuclidCircularARegular";
-  src: url('../fonts/EuclidCircularA-Regular.ttf');
+  src: url('../fonts/EuclidCircularA-Regular.ttf') format("truetype"),
+  url('../fonts/EuclidCircularA-Regular.woff') format("woff");
 }
 
 @font-face {
   font-family: "EuclidCircularAMedium";
-  src: url('../fonts/EuclidCircularA-Medium.ttf');
+  src: url('../fonts/EuclidCircularA-Medium.ttf') format("truetype"),
+  url('../fonts/EuclidCircularA-Medium.woff') format("woff");
 }
 
 @font-face {
   font-family: "EuclidCircularASemiBold";
-  src: url('../fonts/EuclidCircularA-SemiBold.ttf');
+  src: url('../fonts/EuclidCircularA-SemiBold.ttf') format("truetype"),
+  url('../fonts/EuclidCircularA-SemiBold.woff') format("woff");
 }
 
 @font-face {
   font-family: "EuclidCircularABold";
-  src: url('../fonts/EuclidCircularA-Bold.ttf');
+  src: url('../fonts/EuclidCircularA-Bold.ttf') format("truetype"),
+  url('../fonts/EuclidCircularA-Bold.woff') format("woff");
 }
 
 body{
