@@ -604,7 +604,7 @@ margin:  0 0 16px 0;
   font-style: normal;
   font-weight: 300;
   line-height: 14px;
-  font-family: "EuclidCircularALight";
+  font-family: "EuclidCircularARegular";
   text-align: left;
 color: var(--smoke);  
 margin:  0;  
@@ -715,6 +715,7 @@ margin: 0 0 40px 0;
   flex-direction: column;
   padding: 30px 40px;
   color: var(--grey);
+  font-family: "EuclidCircularAMedium";
 }
 
 .ct-vertical ~ .ct-vertical {
@@ -859,6 +860,7 @@ font-style: normal;
 font-weight: 500;
 line-height: 16px;
 color: var(--grey);
+font-family: "EuclidCircularAMedium";
 }
 
 .depositing .money_section .money_wrapper .money_row .money_rate h4{
@@ -899,7 +901,7 @@ font-size: 18px;
 font-style: normal;
 font-weight: 500;
 line-height: 18px;
-
+font-family: "EuclidCircularAMedium";
 
   }
 
